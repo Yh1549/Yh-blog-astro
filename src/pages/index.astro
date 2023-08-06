@@ -1,6 +1,6 @@
 ---
-import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+
 const pageTitle = "Home";
 
 const cardInfo = {
@@ -11,29 +11,38 @@ const cardInfo = {
 ---
 
 <Layout title={pageTitle}>
-  <main>
-    <h1>This is Home</h1>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+  <main class="p-4">
+    <section>
+      <div class="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 class="text-5xl font-bold">Work in progress....</h1>
+          <h1
+            class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-2xl font-extrabold text-transparent"
+          >
+            Understand User Flow.
+          </h1>
+
+          <p class="mx-auto mt-4 max-w-xl text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+            illo tenetur fuga ducimus numquam ea!
+          </p>
+
+          <div class="mt-4 flex flex-wrap justify-center gap-4">
+            <a class="btn btn-primary rounded-md" href="/get-started">
+              Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+    <section>
+      <h2>Featured</h2>
+    </section>
+    <div class="divider"></div>
+    <section>
+      <h2>Recent</h2>
+    </section>
   </main>
 </Layout>
