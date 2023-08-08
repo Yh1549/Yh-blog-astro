@@ -7,3 +7,6 @@
     font-family: "IBM Plex Mono", monospace;
   }
 } */
+.hrDivider {
+  @apply my-6 border-t-2 border-secondary;
+}

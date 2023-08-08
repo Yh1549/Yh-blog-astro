@@ -2,47 +2,29 @@
 import Layout from "../layouts/Layout.astro";
 
 const pageTitle = "Home";
-
-const cardInfo = {
-  href: "https://docs.astro.build/",
-  title: "Documentation",
-  body: "Learn how Astro works and explore the official API docs.",
-};
 ---
 
 <Layout title={pageTitle}>
-  <main class="p-4">
-    <section>
-      <div class="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
-        <div class="mx-auto max-w-3xl text-center">
-          <h1 class="text-5xl font-bold">Work in progress....</h1>
-          <h1
-            class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-2xl font-extrabold text-transparent"
-          >
-            Understand User Flow.
-          </h1>
-
-          <p class="mx-auto mt-4 max-w-xl text-sm">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-            illo tenetur fuga ducimus numquam ea!
-          </p>
-
-          <div class="mt-4 flex flex-wrap justify-center gap-4">
-            <a class="btn btn-primary rounded-md" href="/get-started">
-              Get Started</a
-            >
-          </div>
-        </div>
-      </div>
+  <main class="px-4">
+    <hr class="hrDivider" />
+    <section class="py-4 flex flex-col gap-4">
+      <h1 class="text-5xl font-bold my-4">難</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deleniti
+        impedit ratione cupiditate officia odit sed nesciunt exercitationem ut
+        harum amet, ipsa, temporibus doloremque aspernatur! Modi, maiores nulla?
+        Aspernatur, vel!
+      </p>
+      <!-- <p class="text-sm">個人部落格＆筆記</p>
+        <p class="text-sm">純分享, 若有誤歡迎來信指正</p> -->
     </section>
-
-    <div class="divider"></div>
-    <section>
-      <h2>Featured</h2>
+    <hr class="hrDivider" />
+    <section class="py-4">
+      <h2 class="text-2xl font-bold">Featured</h2>
     </section>
-    <div class="divider"></div>
-    <section>
-      <h2>Recent</h2>
+    <hr class="hrDivider" />
+    <section class="py-4">
+      <h2 class="text-2xl">Recent</h2>
     </section>
   </main>
 </Layout>

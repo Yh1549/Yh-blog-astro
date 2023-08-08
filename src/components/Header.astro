@@ -4,7 +4,7 @@
 <script>
   const themeToggle = document.getElementById("themeToggle");
   window.addEventListener("load", () => {
-    if (localStorage.getItem("theme") == "coffee") {
+    if (localStorage.getItem("theme") == "dracula") {
       themeToggle.checked = false;
     } else {
       themeToggle.checked = true;
@@ -12,22 +12,37 @@
   });
 </script>
 <header>
-  <div class="mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto px-4">
     <div class="flex h-16 items-center justify-between">
       <div class="flex-1 md:flex md:items-center md:gap-12">
-        <a class="block text-teal-600" href="/">
+        <a class="block text-current text-2xl font-bold" href="/">
           <span class="sr-only">Home</span>
-          Home
+          YH-BLOG
         </a>
       </div>
-
       <div class="md:flex md:items-center md:gap-12">
         <nav aria-label="Global" class="block">
-          <ul class="flex items-center gap-6 text-sm">
+          <ul class="flex items-center gap-6 text-lg">
+            <li>
+              <a
+                class="text-gray-500 transition hover:text-gray-500/75"
+                href="/blog"
+              >
+                Posts
+              </a>
+            </li>
             <li>
               <a
                 class="text-gray-500 transition hover:text-gray-500/75"
                 href="/"
+              >
+                Tags
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-gray-500 transition hover:text-gray-500/75"
+                href="/about"
               >
                 About
               </a>
@@ -38,7 +53,7 @@
       <label class="swap swap-rotate ml-4">
         <!-- this hidden checkbox controls the state -->
         <input
-          data-toggle-theme="coffee"
+          data-toggle-theme="dracula"
           data-act-class="c"
           type="checkbox"
           id="themeToggle"
@@ -46,7 +61,7 @@
 
         <!-- sun icon -->
         <svg
-          class="swap-on fill-current w-10 h-10"
+          class="swap-on fill-current w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           ><path
@@ -56,7 +71,7 @@
 
         <!-- moon icon -->
         <svg
-          class="swap-off fill-current w-10 h-10"
+          class="swap-off fill-current w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           ><path

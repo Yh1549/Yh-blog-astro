@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const pageTitle = "About me";
+const pageTitle = "About this blog";
 
 const identity = {
   firstName: "Sarah",
@@ -16,28 +16,12 @@ const finished = false;
 const goal = 3;
 
 const skillColor = "navy";
+
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-    <style define:vars={{ skillColor }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+<Layout title="about">
+  <main>
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
@@ -71,5 +55,5 @@ const skillColor = "navy";
         <p>My goal is not 3 days.</p>
       )
     }
-  </body>
-</html>
+  </main>
+</Layout>
