@@ -8,6 +8,7 @@ image:
   alt: "The full Astro logo."
 tags: ["astro", "blogging", "learning in public"]
 slug: "post-1"
+featured: true
 ---
 
 # My First Blog Post

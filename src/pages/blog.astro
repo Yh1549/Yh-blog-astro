@@ -1,10 +1,19 @@
 ---
+// import {collections} from "../posts/config"
+// import { getCollection } from "astro:content";
+// import {  getEntry, getEntries } from 'astro:content';
 import Layout from "../layouts/Layout.astro";
 
-const pageTitle = "Blog";
-const posts = await Astro.glob("../posts/*.md");
+const pageTitle = "blog";
+const posts = await Astro.glob("../content/blogCollection/*.md");
+
+// const posts = await getEntry("blogCollection","post-1");
+// const featured = await getEntries()
+// const featuredPost = posts.filter((blog) => blog.data.featured);
+// const relatedPosts = await getEntries(blog.data.featured);
 ---
 
+<!-- <script>const posts = await Astro.glob("../posts/*.md")</script> -->
 <Layout title={pageTitle}>
   <main>
     <h1>My Astro Learning Blog</h1>
@@ -16,8 +25,8 @@ const posts = await Astro.glob("../posts/*.md");
     </ul> -->
     <div>
       {
-        posts.map((post) =>(
-          <div>{post.frontmatter.title}</div>
+        posts.map((post) => (
+          <div>{post.frontmatter.slug}</div>
           <div>{post.frontmatter.excerpt}</div>
           <a href={`/${post.frontmatter.slug}`}>post-1</a>
         ))

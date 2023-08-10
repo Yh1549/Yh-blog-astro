@@ -1,6 +1,6 @@
 ---
+import PostCard from "../components/postCard.astro";
 import Layout from "../layouts/Layout.astro";
-
 const pageTitle = "Home";
 ---
 
@@ -14,16 +14,22 @@ const pageTitle = "Home";
         harum amet, ipsa, temporibus doloremque aspernatur! Modi, maiores nulla?
         Aspernatur, vel!
       </p>
+      <span></span>
       <!-- <p class="text-sm">個人部落格＆筆記</p>
         <p class="text-sm">純分享, 若有誤歡迎來信指正</p> -->
     </section>
     <hr class="hrDivider" />
     <section class="py-4">
       <h2 class="text-2xl font-bold">Featured</h2>
+      <div class="flex flex-col gap-6 py-4">
+        <PostCard />
+        <PostCard />
+        <PostCard />
+      </div>
     </section>
     <hr class="hrDivider" />
     <section class="py-4">
-      <h2 class="text-2xl">Recent</h2>
+      <h2 class="text-2xl font-bold">Recent</h2>
     </section>
   </main>
 </Layout>

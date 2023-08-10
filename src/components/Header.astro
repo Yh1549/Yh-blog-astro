@@ -2,12 +2,14 @@
 ---
 
 <script>
-  const themeToggle = document.getElementById("themeToggle");
+  const themeToggle = document.querySelectorAll(".themeToggle");
   window.addEventListener("load", () => {
-    if (localStorage.getItem("theme") == "dracula") {
-      themeToggle.checked = false;
-    } else {
-      themeToggle.checked = true;
+    for (let item of themeToggle) {
+      if (localStorage.getItem("theme") == "dracula") {
+        item.checked = false;
+      } else {
+        item.checked = true;
+      }
     }
   });
   const menuBtn = document.getElementById("menuBtn");
@@ -52,13 +54,13 @@
         </ul>
       </nav>
     </div>
-    <label class="swap swap-rotate ml-4">
+    <label class="swap swap-rotate ml-4 hidden md:inline-grid">
       <!-- this hidden checkbox controls the state -->
       <input
         data-toggle-theme="dracula"
         data-act-class="c"
         type="checkbox"
-        id="themeToggle"
+        class="themeToggle"
       />
       <!-- sun icon -->
       <svg
@@ -118,7 +120,7 @@
               data-toggle-theme="dracula"
               data-act-class="c"
               type="checkbox"
-              id="themeToggle"
+              class="themeToggle"
             />
             <!-- sun icon -->
             <svg
