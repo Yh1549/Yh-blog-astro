@@ -3,7 +3,7 @@ import { defineCollection } from "astro:content";
 import blogSchema from "./_schema";
 // 2. Define your collection(s)
 const blogCollection = defineCollection({
-  type: "blog",
+  type: "content",
   schema: blogSchema,
 });
 // 3. Export a single `collections` object to register your collection(s)

@@ -1,8 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-
 export async function getStaticPaths() {
-  const posts = await Astro.glob("../posts/*.md");
+  const posts = await Astro.glob("../content/blog/*.md");
+  const allBlog = await getCollection("blog");
 
   return posts.map((post) => ({
     params: {
